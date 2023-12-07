@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const plm = require("passport-local-mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/nayapp");
+mongoose.connect("mongodb://127.0.0.1:27017/ImageNet");
 
 const userSchema = new mongoose.Schema({
 	username: {
@@ -16,9 +16,7 @@ const userSchema = new mongoose.Schema({
 	],
 	password: {
 		type: String,
-		require: true,
 	},
-	posts: [],
 	dp: {
 		type: String,
 	},

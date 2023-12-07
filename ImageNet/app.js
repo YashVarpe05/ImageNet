@@ -6,6 +6,8 @@ var logger = require("morgan");
 const expressSession = require("express-session");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const ejs = require("ejs");
+
 const passport = require("passport");
 
 var app = express();
@@ -18,7 +20,7 @@ app.use(
 	expressSession({
 		resave: false,
 		saveUninitialized: false,
-		secret: "asdawdawaidsdj",
+		secret: "hello hey holaa",
 	})
 );
 app.use(passport.initialize());

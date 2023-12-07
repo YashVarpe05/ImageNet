@@ -4,12 +4,18 @@ const userModel = require("./users");
 const postModel = require("./post");
 const passport = require("passport");
 const localStrategy = require("passport-local");
-passport.authenticate(new localStrategy(userModel.authenticate()));
+passport.use(new localStrategy(userModel.authenticate()));
 /* GET home page. */
 router.get("/", function (req, res, next) {
 	res.render("index", { title: "Express" });
 });
 
+router.get("/login", function (req, res, next) {
+	res.render("login");
+});
+router.get("/profile", isLoggedIn, (req, res, next) => {
+	res.send("profile");
+});
 router.post("/register", (req, res) => {
 	const { username, email, fullname } = req.body;
 	const userData = new userModel({
@@ -42,4 +48,12 @@ router.get("/logout", (req, res) => {
 		res.redirect("/");
 	});
 });
+
+function isLoggedIn(req, res, next) {
+	if (req.isAuthenticated()) {
+		return next();
+	} else {
+		res.redirect("/");
+	}
+}
 module.exports = router;
