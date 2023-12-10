@@ -6,10 +6,14 @@
 body {
 	background-color: #dadada;
 	font-family: "SF Pro Display";
+	background: url("https://images.unsplash.com/photo-1698429894841-64b7d0396aa7?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+		no-repeat center center fixed;
+	background-size: cover;
 }
 .container {
 	background-color: #ffff;
 	width: 480px;
+	background: rgba(255, 255, 255, 0.8);
 	position: absolute;
 	margin: auto;
 	top: 50%;
@@ -23,6 +27,9 @@ body {
 	width: 56%;
 	margin: auto;
 	text-align: center;
+}
+a {
+	text-decoration: none;
 }
 
 .img1 {
@@ -73,7 +80,7 @@ h4 {
 }
 
 .int {
-	background-color: #f30d19;
+	background-color: #e60023;
 	margin: 10px 0px;
 	color: white;
 	font-size: 16px;
@@ -81,7 +88,7 @@ h4 {
 	cursor: pointer;
 }
 .int:hover {
-	background-color: #df0812;
+	background-color: #d50c22;
 }
 
 .or {
@@ -107,7 +114,8 @@ h4 {
 }
 .ggl {
 	text-align: center;
-	background-color: #ccc;
+	background-color: #ffffff;
+	border: 1.5px solid #ecedef;
 }
 .ggl a {
 	text-decoration: none;
@@ -117,7 +125,7 @@ h4 {
 	letter-spacing: 1px;
 }
 .ggl:hover {
-	background-color: #a0a0a0;
+	background-color: #e3e3e3;
 }
 
 footer p {
@@ -146,4 +154,9 @@ hr {
 	padding: 15px 20px;
 	background-color: rgb(241, 236, 236);
 	border-radius: 20px;
+}
+
+.alternet {
+	text-decoration: none;
+	color: #2a2a2a;
 }

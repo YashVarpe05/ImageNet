@@ -13,8 +13,12 @@ router.get("/", function (req, res, next) {
 router.get("/login", function (req, res, next) {
 	res.render("login");
 });
+
 router.get("/profile", isLoggedIn, (req, res, next) => {
-	res.send("profile");
+	res.render("profile");
+});
+router.get("/feed", (req, res) => {
+	res.render("feed");
 });
 router.post("/register", (req, res) => {
 	const { username, email, fullname } = req.body;
@@ -35,7 +39,7 @@ router.post(
 	"/login",
 	passport.authenticate("local", {
 		successRedirect: "/profile",
-		failureRedirect: "/",
+		failureRedirect: "/login",
 	}),
 	(req, res) => {}
 );
@@ -53,7 +57,7 @@ function isLoggedIn(req, res, next) {
 	if (req.isAuthenticated()) {
 		return next();
 	} else {
-		res.redirect("/");
+		res.redirect("/login");
 	}
 }
 module.exports = router;
