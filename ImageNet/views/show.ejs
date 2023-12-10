@@ -28,10 +28,10 @@
 		</div>
 		<div class="w-full min-h-screen bg-zinc-800 px-10 py-8 text-white">
 			<div class="cards flex flex-wrap gap-10">
-				<% posts.forEach((elem)=>{ %>
+				<% user.posts.forEach((elem)=>{ %>
 
 				<div class="card w-32">
-					<div class="w-full h-40 bg-zinc-700 rounded-lg overflow-hidden">
+					<div class="w-full h-40 bg-sky-200 rounded-lg overflow-hidden">
 						<img
 							src="/images/uploads/<%=elem.image %>"
 							class="w-full h-full object-cover"
@@ -39,9 +39,6 @@
 						/>
 					</div>
 					<h5 class="mt-2 text-sm"><%=elem.title %></h5>
-					<h6 class="text-xs font-semibold opacity-50">
-						@<%= elem.user.username %>
-					</h6>
 				</div>
 				<% }) %>
 			</div>

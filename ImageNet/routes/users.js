@@ -11,13 +11,13 @@ const userSchema = new mongoose.Schema({
 	posts: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
-			ref: "Post",
+			ref: "post",
 		},
 	],
 	password: {
 		type: String,
 	},
-	dp: {
+	profileImage: {
 		type: String,
 	},
 	email: {
@@ -29,6 +29,7 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		require: true,
 	},
+	contact: Number,
 });
 
 userSchema.plugin(plm);
