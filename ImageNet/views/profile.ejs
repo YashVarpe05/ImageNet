@@ -20,7 +20,7 @@
 		>
 			<h3>ImageNet</h3>
 			<div class="flex gap-10 items-center">
-				<a href="/profile">Profile</a><a href="#">Feed</a
+				<a href="/profile">Profile</a><a href="/feed">Feed</a
 				><a class="px-3 py-2 bg-red-700 text-white rounded-lg" href="/login"
 					>Logout</a
 				>
@@ -68,11 +68,6 @@
 			</div>
 			<div class="cards flex flex-wrap gap-10 px-10 mt-10">
 				<div class="card">
-					<div class="w-52 h-40 bg-zinc-200 rounded-lg"></div>
-					<h3 class="text-xl font-semibold mt-3">All Pins</h3>
-					<h5 class="text-sm font-medium">28 Pins</h5>
-				</div>
-				<div class="card">
 					<div class="w-52 h-40 bg-zinc-200 rounded-lg overflow-hidden">
 						<img
 							src="/images/uploads/<%= user?.posts[0]?.image %> "
@@ -80,7 +75,7 @@
 						/>
 					</div>
 					<a href="/show/posts" class="inline-block text-xl font-semibold mt-3"
-						>YOur Uploaded Pins</a
+						>Your Uploaded Pins</a
 					>
 					<h5 class="text-sm font-medium opacity-60">
 						<%= user.posts.length %> Pins
