@@ -64,6 +64,4 @@ This project is enchanted under the `MIT License` Share the magic!
 
 May your code be spellbinding! 🧙‍♂️✨
 
-```kotlin
-Feel free to adjust the emojis and wording to fit the magical theme, or change them to your liking! The key is to keep it engaging and fun for users.
-```
+
